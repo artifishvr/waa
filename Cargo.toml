@@ -1,0 +1,17 @@
+[package]
+name = "waa"
+version = "0.1.0"
+authors = ["artifishvr"]
+edition = "2024"
+
+[dependencies]
+rodio = { version = "0.22.2", default-features = false, features = ["vorbis", "playback"] }
+winput = { version = "0.2.5", default-features = false, features = ["message_loop"]}
+
+
+[profile.release]
+codegen-units = 1 # Allows LLVM to perform better optimization.
+lto = true        # Enables link-time-optimizations.
+opt-level = "s"   # Prioritizes small binary size. Use `3` if you prefer speed.
+panic = "abort"   # Higher performance by disabling panic handlers.
+strip = true      # Ensures debug symbols are removed.
