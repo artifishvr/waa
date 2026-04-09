@@ -1,0 +1,4 @@
+[target.x86_64-unknown-linux-gnu]
+pre-build = [
+    "apt-get update && apt-get install -y libasound2-dev libx11-dev libxext-dev libxi-dev libxtst-dev libxrandr-dev libxinerama-dev libxcursor-dev libxkbcommon-dev libwayland-dev libgl-dev libegl-dev",
+]

@@ -5,8 +5,8 @@ authors = ["artifishvr"]
 edition = "2024"
 
 [dependencies]
+rdev = "0.5.3"
 rodio = { version = "0.22.2", default-features = false, features = ["vorbis", "playback"] }
-winput = { version = "0.2.5", default-features = false, features = ["message_loop"]}
 
 
 [profile.release]
